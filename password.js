@@ -1,1 +1,1 @@
-const password = 12345;
+const password = 'qwerty';
