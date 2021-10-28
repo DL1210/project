@@ -89,15 +89,74 @@
 // }
 // }
 
-// вывести нечeтные числа от n до m
 
-let n = +prompt('Введите число', '');
-let m = +prompt('Введите число', '');
-let k = +prompt('Введите число', '');
+// вывести числа от n до m (при условии что n < m)
 
-// do {}
+// let n = +prompt('Введите число n', '');
+// let m = +prompt('Введите число m','');
+// let i = n;
+
+// while (i >= n && i <= m) {
+//     console.log(i);
+//     i++;
+// }
 
 
-// for (let e=n; e<=m; e+=1) {
-//     console.log(e);
-//     };
+// do {
+//     console.log(i);
+//     i++;
+// } while (i >= n && i <= m);
+
+// for (let i = n; i <= m; i++) {
+//     console.log(i);
+// }
+
+// вывести числа от m до n (при условии что m > n)
+
+// let n = 10;
+// let m = 15;
+// let i = m;
+
+// while (i >= n) {
+//     console.log(i);
+//     i--;
+// }
+
+// do {
+//     console.log(i);
+//     i--;
+// } while (i >= n);
+
+// for (let i = m; i >= n; i--) {
+//     console.log(i);
+// }
+
+// вывести числа от n до m у которых остаток от деления на k равен 0
+
+// let n = +prompt('Введите число n', '');
+// let m = +prompt('Введите число m', '');
+// let k = +prompt('Введите число k', '');
+
+// while (n <= m) {
+//     if (n % k === 0) {
+//         console.log(n);
+//     }
+//     n++;
+// }
+
+// do {
+//     if (n % k ===0) {
+//     console.log(n);
+// }
+//     n++;
+// } while (n <= m)
+
+// for (let n = 1; n <= m; n++ ) {
+//     if (n % k !== 0) continue;
+//     console.log(n);
+// }
+
+
+
+
+
