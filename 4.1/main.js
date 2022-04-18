@@ -20,14 +20,13 @@ delete user.name;
 
 function isEmpty(user) {
     for (let key in user) {
-        alert (false)
+        return (false)
 
     }
-        alert (true);
+        return (true);
 }
-// isEmpty(user);
+// isEmpty({});
 
-// пояснить решение задачи, нихера непонятно как идет перебор: потому что если нет свойств у объекта, идет алерт true (и это правильно), а если есть свойства то идет сначала алерт false а затем true (и это неправильно) и почему когда ставлю break после false, он не срабатывает и все равно делает alert true
 
 
 //Задача  3 Можно ли изменить объект, объявленный с помощью const? Как вы думаете?
@@ -53,10 +52,11 @@ let salaries = {
 
 let sum = 0;
 for (let key in salaries) {
-  sum = sum + salaries[key];
-}
+  if (typeof salaries[key] === "number") sum = sum + salaries[key];
 
-//alert(sum); // 790
+  }
+
+console.log(sum); // 790
 
 //Задача 5 Создайте функцию multiplyNumeric(obj), которая умножает все числовые свойства объекта obj на 2.
 
@@ -70,7 +70,7 @@ function multiplyNumeric(salaries) {
 
 }
 
-multiplyNumeric(salaries)
+// multiplyNumeric(salaries)
 
 
 

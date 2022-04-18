@@ -46,30 +46,30 @@
 
 //   alert( user.ref.name )
 
-// вернет Джон потому что идет вызов присвоенной функции, далее ref делает this на ретерн и далее name Джон
+// ошибка
 
 // Задача 4 Создайте калькулятор
 
-let calculator = {
-    a: null,
-    b: null,
-    c: null,
-    d: null,
-    read () {
-        this.a = +prompt('a?','');
-        this.b = +prompt('b?', '');
-    },
-    sum () {
-        this.c = this.a + this.b;
-        return this.c;
-    },
-    mul () {
-        this.d = this.a * this.b;
-        return this.d;
-    }
+// let calculator = {
+//     a: null,
+//     b: null,
+//     c: null,
+//     d: null,
+//     read () {
+//         this.a = +prompt('a?','');
+//         this.b = +prompt('b?', '');
+//     },
+//     sum () {
+//         this.c = this.a + this.b;
+//         return this.c;
+//     },
+//     mul () {
+//         this.d = this.a * this.b;
+//         return this.d;
+//     }
 
 
-}
+// }
 
 // calculator.read();
 // alert(calculator.sum());
@@ -77,3 +77,22 @@ let calculator = {
 
 
 //Задача 5
+
+
+let ladder = {
+    step: 0,
+    up() {
+      this.step++;
+      return this;
+    },
+    down() {
+      this.step--;
+      return this;
+    },
+    showStep: function() { // показывает текущую ступеньку
+      alert( this.step );
+      return this;
+    }
+  };
+
+  ladder.up().up().up().down().showStep(); // 2
