@@ -65,76 +65,60 @@ function sum(a) {
 }
 
 // alert( sum(1)(2) );
+// -------------------------------------------------------------------------
 
 // Задача 5. У нас есть встроенный метод arr.filter(f) для массивов. Он фильтрует все элементы с помощью функции f. Если она возвращает true, то элемент добавится в возвращаемый массив.
 // Сделайте набор «готовых к употреблению» фильтров:
 // inBetween(a, b) – между a и b (включительно).
 // inArray([...]) – находится в данном массиве.
 
-let arr = [106, 226, 3, 45, 5665, 64, 709];
-
-// function inBetween (a, b) {
-//   if (arr[a]) {
-//     a = arr.indexOf(a);
-//     console.log(a);
-//   }
-//   if (arr[b]) {
-//     b = arr.indexOf(b);
-//     console.log(b);
-//   }
-
-// }
-
-function inBetween(a, b) {
-  let newArr = [];
-  for (let i = arr.indexOf(a); i <= arr.indexOf(b); i++) {
-    newArr.push(arr[i]);
-  }
-  return newArr;
-}
-
-// let a = arr.filter(inBetween(226, 64));
-// console.log(a);
+// let arr = [1, 2, 3, 4, 5, 6, 7];
 
 // function inBetween(a, b) {
-//   a = arr.indexOf(a);
-//   b = arr.indexOf(b, a);
-//   let num = [];
-//   num.push()
+//   return (item) => item >= a && item <= b;
 // }
 
+// let a = arr.filter(inBetween(3, 6));
+// console.log(a);
+
+// function inArray (a, b, ...rest) {
+//   return (item) => item == a || item == b || item == rest;
+// }
+
+// let b = arr.filter(inArray(1, 2, 10));
+// console.log(b);
+
+// -------------------------------------------------------------------------
 // Задача 6  Сортировать по полю
 
+// let users = [
+//   { name: "John", age: 20, surname: "Johnson" },
+//   { name: "Pete", age: 18, surname: "Aronson" },
+//   { name: "Ann", age: 19, surname: "Hathaway" }
+// ];
 
-let users = [
-  { name: "John", age: 20, surname: "Johnson" },
-  { name: "Pete", age: 18, surname: "Peterson" },
-  { name: "Ann", age: 19, surname: "Hathaway" }
-];
-// const field = 'name';
+// const byField = (field) => {
+//   return (a, b) => a[field] > b[field] ? 1 : -1
+// };
 
-// users.sort();
+// users.sort(byField('name'));
 
-const byField = (field) => {
-  return (a, b) => a[field] > b[field] ? 1 : -1
-};
+// console.log(users);
 
-users.sort(byField('name'));
-
-console.log(users);
+// -------------------------------------------------------------------------
 
 // Задача 7 Армия функций
 
 function makeArmy() {
   let shooters = [];
 
-  let i = 0;
-  while (i < 10) {
+  for(let i = 0; i < 10; i++) {
     let shooter = function() { // функция shooter
+
       alert( i ); // должна выводить порядковый номер
     };
     shooters.push(shooter);
-    i++;
+    ;
   }
 
   return shooters;
@@ -142,5 +126,7 @@ function makeArmy() {
 
 let army = makeArmy();
 
-// army[0]();
-// army[5]();
+army[0]();
+army[5]();
+
+
